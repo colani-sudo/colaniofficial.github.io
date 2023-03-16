@@ -1,15 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Colani's Resume</title>
+        <title>Colani | Official Page</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+        <link rel="preconnect"  href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Social icons library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     </head>
-    <body>
-        <p>
-            Former intern at Cowell and IT Technicial at TLC.
-        </p>
+    <body id="resume">
+        <nav>
+            <h2 class="logo">Colani<span>Official</span></h2>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+            <a href="#" class="btn">Let's Chat</a>
+        </nav>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="images/contact.png">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">Personal <span>Info</span></h1>
+                            <p>
+                                I am a full-time student, part-time systems and network programmer. 
+                                Flipping between C/C++, Java, Linux programming and Python 
+                                Programming. A Unix  OS's Fanatic.
+                            </p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                                    <li><span>Web Development</span><br>Designing Web/App Development</li>
+                                    <li><span>App Development</span><br>Building Android/IOS apps</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>2021 - Current</span><br>UI/UX Design National Dong Hwa University</li>
+                                    <li><span>2019 - 2021</span><br>Redhat Linux Admin. National Dong Hwa University</li>
+                                    <li><span>2017 - 2019</span><br>UI/UX Design National Dong Hwa University</li>
+                                    <li><span>2016 - 2017</span><br>Internship at Cowell Technologies</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2020</span><br>Bsc CS National Dong Hwa University</li>
+                                    <li><span>2018</span><br>Associate Degree at Limkokwing</li>
+                                    <li><span>2014</span><br>Web Design with HTML and CSS Certificate</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>ColaniOfficial&trade;</p>
+            <p>All Copyrights Reserved&reg;</p>
+            <p>@2023</p>
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+            <p class="end">Copyrights by Colani Matsenjwa</p>
+        </footer>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
         
-        University  :   National Dong Hwa University
-        Major       :   Computer Science and Information Engineering
-        Grad year   :   2024 
     </body>
 </html>
